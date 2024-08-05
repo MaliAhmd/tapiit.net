@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'DIN Next Italic';
+  src: url('fonts/dinnext_i4.61ded265c0c537a08a3ef6c1f78e76a5f3be91c9.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DIN Next Normal';
+  src: url('fonts/dinnext_n4.438c249fdbceeefafa64221353c5ece2fdb8ae14.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DIN Next Medium';
+  src: url('fonts/dinnext_n5.9de62f474792d83a5c7487ba13c73b05f03f03c7.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Futura Normal';
+  src: url('fonts/futura_n3.cc9b68efd1cfa8296b0ec7d463066804b6bcc72b.woff2') format('woff2');
+}
+body{
+  font-family: DIN Next Normal, sans-serif;
+}
+.rat svg{
+  color: #f6c567 !important;
+}
+.breadcrumb .active{
+  color: #2e2e2e;
+  font-size: 13px !important;
+  margin-top: 3px;
+}
+.breadcrumb a{
+  color:#8c8c8c;
+  text-decoration: none;
+  font-size: 13px !important;
+}
+.pi{
+    margin-top: 5%;
+}
+.pi p{
+    font-size: 15px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding: 4%;
+}
+.pi h3{
+    line-height: 1.1052631579;
+    letter-spacing: -1px;
+    font-size: 48px;
+    font-family:Futura Normal !important;
+}
+.text-center a{
+    font-size: 15px;
+    color: black;
+    font-family: DIN Next Medium;
+    text-decoration: none;
+    border-bottom: 1px solid #b6b6b6 ;
+}
+.list li{
+    margin-top: 4% !important;
+}
+.now{
+    font-size: 13px;
+    font-family: Futura, sans-serif;
+}
+.price{
+    color: #DE2A2A;
+    font-size: 22px !important;
+    font-family: DIN Next Normal, sans-serif;
+}
+.price1{
+    margin-left: 2%;
+    font-size: 15px;
+    font-family: DIN Next Normal, sans-serif;
+    color: #8c8c8c;
+}
+.save1 {
+  position: block !important;
+  margin-left: 2% ;
+  bottom: 0 !important;
+  right: 0 !important;
+  background-color: #DE2A2A;
+  font-family: DIN Next Medium;
+  color: white;
+  font-size: 16px !important;
+  font-weight: 100 !important;
+  border-radius: 0px !important;
+}
+  .quantity {
+    display: flex;
+    width: 20%;
+  }
+  .offers p{
+    font-size: 15px;
+    line-height: 10px;
+  }
+  .add{
+    background-color: transparent;
+    border: none;
+    padding: 2%;
+  }
+  .add:hover{
+    background-color: whitesmoke !important;
+    border: none;
+  }
+  .more_pay{
+    color: #2e2e2e;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  .more_pay:hover{
+    text-decoration: underline  ;
+  }
+  .social svg{
+    font-size: 15px !important;
+    color: #8c8c8c;
+    margin: 5px;
+  }
+  .social svg:hover{
+    font-size: 15px !important;
+    color: black;
+  }
+  .below{
+    font-family: Futura Normal, sans-serif;
+    font-size: 24px;
+  }
+  .fadeOut {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .small-image {
+    cursor: pointer;
+    transition: border 0.3s ease;
+  }
+  .small-image.active {
+    border: 2px solid black;
+  }
+  #mainImageContainer {
+    max-width: 600px;
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Hide any overflow */
+  }
+  #mainImage {
+    max-width: 100%;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  .hidden {
+    opacity: 0;
+    transform: translateX(-50px); /* Off-screen to the left */
+  }
+  .visible {
+    opacity: 1;
+    transform: translateX(0); /* Slide in */
+  }
+  .now{
+    font-size: 13px;
+    font-family: DIN Next Medium, sans-serif;
+}
+.sid, .ach, .image-zoom{
+  opacity: 0;
+}
+@keyframes slide-up {
+  0% {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes slideRightToLeft {
+  from {
+    opacity: 0;
+      transform: translateX(10%);
+  }
+  to {
+    opacity: 1;
+      transform: translateX(0%);
+  }
+}
+/* FAQ ACC */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  font-family:DIN Next Medium, sans-serif;
+  padding: 0 50px;
+}
+.accordion h1 {
+  font-size: 32px;
+  text-align: center;
+}
+.accordion-item {
+  margin-top: 16px;
+  border-bottom: 1px solid #e0e0e0 !important;
+ border-top: none !important;
+ border-left: none !important;
+ border-right: none !important;
+}
+.accordion-item .accordion-item-title {
+  position: relative;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-item .accordion-item-desc {
+  display: none;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #2e2e2e;
+  font-family: DIN Next Normal, sans-serif;
+  padding: 10px 20px 20px;
+  box-sizing: border-box;
+  animation: slideFromBottom 1s forwards;
+}
+.accordion-item input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+.accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
+  display: block;
+}
+.accordion-item
+  input[type="checkbox"]:checked
+  ~ .accordion-item-title
+  .icon:after {
+  content: "-";
+  font-size: 20px;
+}
+.accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
+  content: "+";
+  font-size: 20px;
+}
+.accordion-item:first-child {
+  margin-top: 0;
+}
+.accordion-item .icon {
+  margin-left: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .accordion {
+      padding: 0 16px;
+  }
+  .accordion h1 {
+      font-size: 22px;
+  }
+}
+@keyframes slideFromBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(20%);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.three_li{
+  width: 50% !important;
+}
+
+@media (max-width: 767px) {
+  .pi{
+    width: 100% !important;
+  }
+  
+    .pi h3{
+    font-size: 36px !important;
+  }
+  .section__header h3{
+    font-size: 36px !important;
+  }
+  .select_card{
+    font-size: 36px !important;
+  }
+  .product-container{
+    justify-content: center;
+  }
+  .three_li{
+    width: 80% !important;
+  }
+  .card_head{
+    font-size: 36px !important;
+  }
+  }

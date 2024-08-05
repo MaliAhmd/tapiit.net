@@ -1,0 +1,403 @@
+.breadcrumb .active {
+  color: #2e2e2e;
+  font-size: 13px !important;
+  margin-top: 3px;
+}
+
+.breadcrumb a {
+  color: #8c8c8c;
+  text-decoration: none;
+  font-size: 13px !important;
+}
+
+.fa-star {
+  color: #f6c567;
+  font-size: 20px;
+}
+
+.h4 {
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.price {
+  color: #DE2A2A;
+  font-size: 22px !important;
+}
+
+.price1 {
+  margin-left: 2%;
+  font-size: 15px !important;
+  color: #8c8c8c;
+}
+
+.price-list {
+  position: relative;
+}
+
+.save {
+  position: block !important;
+  margin-left: 2%;
+  bottom: 0 !important;
+  right: 0 !important;
+  background-color: #DE2A2A;
+  color: white;
+  font-size: 15px !important;
+  padding: 5px !important;
+  border-radius: 0px !important;
+  font-weight: normal !important;
+}
+
+.tax {
+  color: #2e2e2e;
+  font-size: 14px;
+}
+
+.tax a {
+  color: #2e2e2e;
+  text-decoration-color: #b6b6b6;
+}
+
+.quantity {
+  display: flex;
+  width: 20%;
+}
+
+.offers p {
+  font-size: 15px;
+  line-height: 10px;
+}
+
+.add {
+  border-radius: 0px !important;
+  padding: 2% !important;
+  background: #0d0d0d !important;
+  border: none !important;
+  color: white !important;
+}
+
+.quantity button {
+  border: none !important;
+}
+
+.never {
+  color: #8c8c8c !important;
+}
+
+.never:hover {
+  color: #0d0d0d !important;
+}
+
+.list-inline {
+  font-size: 13px;
+  font-family: DIN Next Medium, sans-serif;
+  cursor: pointer;
+  padding-bottom: 18px;
+  /* border-bottom: 1px solid #b6b6b6; */
+  width: 100% !important;
+}
+
+.list-inline-item {
+  position: relative;
+}
+
+.list-inline-item.active {
+  color: #0d0d0d;
+}
+
+.list-inline-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  /* Adjust the position as needed */
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  animation: slide-in 0.3s ease-in-out forwards;
+}
+
+/* .content-div {
+  animation: slide-in 0.5s forwards;
+} */
+
+
+
+
+.logo-list__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-list__item {
+  flex: 1;
+  opacity: 0;
+  max-width: 200px;
+  /* Adjust the maximum width as needed */
+}
+
+/* .logo-list__image {
+    width: 100%;
+    height: auto;
+} */
+.hey {
+  font-size: 36px !important;
+  font-family: Futura Normal, sans-serif;
+  color: #0D0D0D !important;
+  font-weight: lighter !important;
+}
+
+
+.more {
+  border-radius: 0px !important;
+  padding: 1% !important;
+  background: #0d0d0d !important;
+  border: none !important;
+  color: white !important;
+  text-align: center !important;
+}
+
+#descriptionContent,
+#faqsContent,
+#guidelinesContent,
+#deliveryContent {
+  font-size: 15px;
+  word-spacing: 1px;
+  width: 100%;
+}
+
+/*  */
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.small-image {
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.small-image.active {
+  border: 2px solid black;
+}
+
+/* CSS for main image with sliding transition */
+#mainImageContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  /* Center the container */
+  overflow: hidden;
+  /* Hide any overflow */
+}
+
+#mainImage {
+  max-width: 100%;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-50px);
+  /* Off-screen to the left */
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+  /* Slide in */
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.imi,
+.exe,
+.dub,
+.tx,
+.tx1,
+.tx2 {
+  opacity: 0;
+}
+
+/* FAQ ACC */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  font-family: DIN Next Medium, sans-serif;
+  padding: 0 50px;
+}
+
+.accordion h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.accordion-item {
+  margin-top: 16px;
+  border-bottom: 1px solid #e0e0e0 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.accordion-item .accordion-item-title {
+  position: relative;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-item .accordion-item-desc {
+  display: none;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #2e2e2e;
+  font-family: DIN Next Normal, sans-serif;
+  padding: 10px 20px 20px;
+  box-sizing: border-box;
+  animation: slideFromBottom 1s forwards;
+}
+
+.accordion-item input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.accordion-item input[type="checkbox"]:checked~.accordion-item-desc {
+  display: block;
+}
+
+.accordion-item input[type="checkbox"]:checked~.accordion-item-title .icon:after {
+  content: "-";
+  font-size: 20px;
+}
+
+.accordion-item input[type="checkbox"]~.accordion-item-title .icon:after {
+  content: "+";
+  font-size: 20px;
+}
+
+.accordion-item:first-child {
+  margin-top: 0;
+}
+
+.accordion-item .icon {
+  margin-left: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .accordion {
+    padding: 0 16px;
+  }
+
+  .accordion h1 {
+    font-size: 22px;
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes slide-in {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo-list__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  .hey{
+    font-size: 24px !important;
+    width: 100% !important;
+  }
+  .tx2  p{
+    padding: 0 !important;
+  }
+  .always_row{
+    display: flex !important;
+    flex-direction: column-reverse !important;
+  }
+  .tx1 {
+    padding: 0 !important;
+  }
+  .tx{
+    padding: 0 !important;
+  }
+  #delivery{
+    display: none !important;
+  }
+  .add{
+    padding: 5% !important;
+    width: 90% !important;
+    margin: auto !important;
+  }
+
+}
+
+
+@media (max-width: 768px){
+    .forge, .tx{
+        padding-right:0 !important;
+    }
+    .give-it-top{
+        margin-top:3rem;
+    }
+}
+
+.futura{
+    font-family:Futura Normal;
+}
+.medium{
+    font-family:DIN Next Medium;
+}

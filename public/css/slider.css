@@ -1,0 +1,128 @@
+body {
+    background-color: burlywood;
+  }
+  
+  .mains {
+    position: relative;
+    overflow: hidden;
+    min-width: 100%;
+  }
+  
+  .sliderx {
+    display: flex;
+    width: 230%;
+    overflow-y: scroll;
+    transition: transform 0.5s ease;
+  }
+  .slidex {
+    width: 100%;
+    display: flex;
+    opacity: 0.5;
+    margin-right: 10px;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slidex img,
+  .slidex div {
+    max-width: 50%;
+  }
+  .slidex div {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+  }
+  
+  .slidex.active {
+    opacity: 1;
+  }
+  .slider-controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 40%;
+    right: 20px;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+  
+  .slider-controls button {
+    width: 3.5rem;
+    height: 3.5rem;
+    outline: none;
+    background-color: white;
+  }
+  
+  .slider-controls #prevBtn,
+  .slider-controls #nextBtn {
+    border: 1px solid rgba(46, 46, 46, 0.24);
+  }
+  
+  .tabs-container {
+    position: relative;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  .tab {
+    padding: 10px;
+    min-width: 31%;
+    cursor: pointer;
+    position: relative;
+    font-family: DIN Next Medium, sans-serif;
+    color: #b6b6b6;
+  }
+  .tab div {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  
+  .tab.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -2px; /* Adjust the position as needed */
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    animation: slide-in 0.3s ease-in-out forwards;
+    color: black !important;
+  }
+  
+  @keyframes slide-in {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .slider-controls button span {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .slider-controls button:hover span {
+    transform: translateX(-5px);
+  }
+  
+  .slider-controls button span:hover {
+    transform: translateX(0);
+  }
+  .main_h{
+    font-size: 24px;
+    font-family: Futura Normal, sans-serif;
+  }
+  .main p{
+    font-size: 15px;
+  }
