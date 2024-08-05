@@ -45,6 +45,26 @@
 .iti{
   width: 100%;
 }
+.imgerror{
+    position: absolute;
+    top: 19vw;
+    z-index: 1000;
+    left: 71vw;
+    width: 9vw;
+}
+.logoerror{
+    position: absolute;
+    top: 41vw;
+    z-index: 1000;
+    left: 71vw;
+    width: 9vw;
+}
+
+.errormsg{
+    color: red;
+    margin: 0;
+    font-size: 0.9vw;
+}
 </style>
 
 <body>
@@ -91,6 +111,7 @@
                                             </svg>
                                         </label>
                                         <input type="file" id="uploadInput" accept="image/*" name="img" onchange="previewImage(event)">
+                                        
                                         @else
                                         
                                          <img id="userImage" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="User Image">
@@ -378,7 +399,7 @@
                                 </div>
 
                                 <div class="pt-1 mb-2 text-center">
-                                    <button type="submit" class="btn btn-dark btn-lg btn-block" style="padding: 5px 30px; font-size:16px">Update Info</button>
+                                    <button type="submit" id="uploadbtn" class="btn btn-dark btn-lg btn-block" style="padding: 5px 30px; font-size:16px">Update Info</button>
                                 </div>
 
 
@@ -391,6 +412,12 @@
         </div>
 
     </section>
+                <div class="imgerror" style="display: none;">
+                         <p class="errormsg">Image Size Must be 2MB or Less</p>
+                     </div>
+                     <div class="logoerror" style="display: none;">
+                         <p class="errormsg">Image Size Must be 2MB or Less</p>
+                     </div>
     <script>
    const phoneInputField = document.querySelector("#phone");
    const phoneInput = window.intlTelInput(phoneInputField, {
@@ -400,30 +427,54 @@
  </script>
     <script>
         function previewImage(event) {
-            const input = event.target;
-            const image = document.getElementById('userImage');
-            const label = document.getElementById('uploadLabel');
-            const file = input.files[0];
+        const input = event.target;
+        const image = document.getElementById('userImage');
+        const label = document.getElementById('uploadLabel');
+        const errorDiv = document.querySelector('.imgerror');
+        updbtn=document.querySelector('#uploadbtn');
+        const file = input.files[0];
 
-            if (file) {
-                const reader = new FileReader();
-
-                reader.onload = function(e) {
-                    image.src = e.target.result;
-                    label.style.display = 'block';
-                    label.style.color = 'white';
-                };
-                reader.readAsDataURL(file);
+        if (file) {
+            // Check file size (file.size is in bytes, 2MB = 2 * 1024 * 1024 bytes)
+            const maxSize = 2 * 1024 * 1024;
+            if (file.size > maxSize) {
+                errorDiv.style.display = 'block';
+                updbtn.disabled = true;
+                return;
+            } else {
+                errorDiv.style.display = 'none';  // Hide error if the file is valid
+                updbtn.disabled = false;
             }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                image.src = e.target.result;
+                image.style.display = 'block'; // Show the image
+                label.style.display = 'block';
+                label.style.color = 'white';
+            };
+            reader.readAsDataURL(file);
         }
+    }
 
         function previewImage1(event) {
             const input = event.target;
             const image = document.getElementById('logoImage');
             const label = document.getElementById('uploadLabel2');
+            const errorDiv = document.querySelector('.logoerror');
+            updbtn=document.querySelector('#uploadbtn');
             const file = input.files[0];
 
             if (file) {
+            const maxSize = 2 * 1024 * 1024;
+            if (file.size > maxSize) {
+                errorDiv.style.display = 'block';
+                updbtn.disabled = true;
+                return;
+            } else {
+                errorDiv.style.display = 'none';  // Hide error if the file is valid
+                updbtn.disabled = false;
+            }
                 const reader = new FileReader();
 
                 reader.onload = function(e) {
